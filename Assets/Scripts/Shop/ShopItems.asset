@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ba852ca7f5fc3418466b987b5a5f00, type: 3}
+  m_Name: ShopItems
+  m_EditorClassIdentifier: 
+  item:
+  - name: Item 0
+    id: 0
+    price: 0
+    itemSprite: {fileID: 21300000, guid: b150e2e1d88606747a1d9852a57772f8, type: 3}
+  - name: Item 1
+    id: 1
+    price: 1000
+    itemSprite: {fileID: 21300000, guid: 047c4400ecd28f04f98eefd288b20a3f, type: 3}
+  - name: Item 2
+    id: 2
+    price: 3000
+    itemSprite: {fileID: 21300000, guid: 7c79ff717b0f3874caeae4b8cca6733f, type: 3}
+  - name: Item 3
+    id: 3
+    price: 0
+    itemSprite: {fileID: 21300000, guid: fc972b5a8037e214bb775194b8c9346a, type: 3}
+  - name: Item 4
+    id: 4
+    price: 1000
+    itemSprite: {fileID: 21300000, guid: 7c93f5154dfaa6f4080d52db8e94282a, type: 3}
+  - name: Item 5
+    id: 5
+    price: 3000
+    itemSprite: {fileID: 21300000, guid: 987d8046cd168364db72fec9ae941470, type: 3}
+  - name: Item 6
+    id: 6
+    price: 0
+    itemSprite: {fileID: 21300000, guid: 5610271362c08b240b4e1abf9a5b612b, type: 3}
+  - name: Item 7
+    id: 7
+    price: 1500
+    itemSprite: {fileID: 21300000, guid: effb4c3ef02d8ea42927da6285cad151, type: 3}
+  - name: Item 8
+    id: 8
+    price: 3000
+    itemSprite: {fileID: 21300000, guid: 2dc2ac084125a8941915f2fb089acf26, type: 3}
+  - name: Item 9
+    id: 9
+    price: 0
+    itemSprite: {fileID: 21300000, guid: eeec65335ef294d4c9b395166f4cf2a0, type: 3}
+  - name: Item 10
+    id: 10
+    price: 1500
+    itemSprite: {fileID: 21300000, guid: 05d3b818c7df8af4fb58ce9c9902affb, type: 3}
+  - name: Item 11
+    id: 11
+    price: 3000
+    itemSprite: {fileID: 21300000, guid: f6112b0d00b192040a2cb3be8d4bddd6, type: 3}
+  - name: Item 12
+    id: 12
+    price: 0
+    itemSprite: {fileID: 21300000, guid: d9d955207cd9bf24ca00ed292731333f, type: 3}
+  - name: Item 13
+    id: 13
+    price: 1500
+    itemSprite: {fileID: 21300000, guid: e0a8dc9a6eb48554580c6be5bc350a81, type: 3}
+  - name: Item 14
+    id: 14
+    price: 3000
+    itemSprite: {fileID: 21300000, guid: bb5465c79c89fe941b22913a66c8e183, type: 3}
