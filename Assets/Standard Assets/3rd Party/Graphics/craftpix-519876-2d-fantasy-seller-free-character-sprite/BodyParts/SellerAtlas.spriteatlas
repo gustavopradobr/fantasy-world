@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SellerAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 2
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: fc2258129ae57d5428f0934a2bea5e11, type: 3}
+    - {fileID: 2800000, guid: 67602f0f69a608e46ac2af51cb7a86b8, type: 3}
+    - {fileID: 2800000, guid: a15e974c724b90144b01607eeaddb141, type: 3}
+    - {fileID: 2800000, guid: ca61fa48b1fb7f54a9d47d76ef0ec46f, type: 3}
+    - {fileID: 2800000, guid: 4d48cc8895e68a54f80758becf8ae788, type: 3}
+    - {fileID: 2800000, guid: 4925ead976bbd5f47b18937a4c2373a8, type: 3}
+    - {fileID: 2800000, guid: 17c9c21ab33ff7f498d7947703c8a8d7, type: 3}
+    - {fileID: 2800000, guid: 9f99b23111bc6a349bb77fff880738cd, type: 3}
+    - {fileID: 2800000, guid: 232f4b2029a52ba4b96f10b5d4eb8a33, type: 3}
+    - {fileID: 2800000, guid: 88b3f9aaaa0aecb4ab45ca0695724496, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 232f4b2029a52ba4b96f10b5d4eb8a33, type: 3}
+  - {fileID: 21300000, guid: 9f99b23111bc6a349bb77fff880738cd, type: 3}
+  - {fileID: 21300000, guid: fc2258129ae57d5428f0934a2bea5e11, type: 3}
+  - {fileID: 21300000, guid: ca61fa48b1fb7f54a9d47d76ef0ec46f, type: 3}
+  - {fileID: 21300000, guid: 4d48cc8895e68a54f80758becf8ae788, type: 3}
+  - {fileID: 21300000, guid: 4925ead976bbd5f47b18937a4c2373a8, type: 3}
+  - {fileID: 21300000, guid: 17c9c21ab33ff7f498d7947703c8a8d7, type: 3}
+  - {fileID: 21300000, guid: 88b3f9aaaa0aecb4ab45ca0695724496, type: 3}
+  - {fileID: 21300000, guid: a15e974c724b90144b01607eeaddb141, type: 3}
+  - {fileID: 21300000, guid: 67602f0f69a608e46ac2af51cb7a86b8, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - box2
+  - box1
+  - feet
+  - left arm
+  - right arm
+  - torso
+  - box
+  - box3
+  - head
+  - hat
+  m_RenderDataMap: {}
+  m_Tag: SellerAtlas
+  m_IsVariant: 0

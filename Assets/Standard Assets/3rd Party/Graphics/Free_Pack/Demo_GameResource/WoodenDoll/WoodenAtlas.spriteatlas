@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WoodenAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 2
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: ce9d918abfecfad4a82b17d3e5b4cd05, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 33565560348a66a42a8c9ce953fe362d, type: 3}
+  - {fileID: 21300000, guid: 0f648fc0a6efe2141b60fded0165e020, type: 3}
+  - {fileID: 21300000, guid: c9f91e71355689941a69098c0beb550f, type: 3}
+  - {fileID: 21300000, guid: 8a3dfc32b44a4ba45ae4bfd7fb68bbf5, type: 3}
+  - {fileID: 21300000, guid: 9816c962cb200cf4683cb7b23bb6a6d8, type: 3}
+  - {fileID: 21300000, guid: f348f9140c89b604280a33a1cc085ccb, type: 3}
+  - {fileID: 21300000, guid: cec8e324f73120545bc2201e4f867c76, type: 3}
+  - {fileID: 21300000, guid: 6b44ce05bd5ae764e9d72c4ebeb463b5, type: 3}
+  - {fileID: 21300000, guid: 5ccb3ac55f7859e41abd1ab2130a6057, type: 3}
+  - {fileID: 21300000, guid: b6beb03896e93214b8246a79626e2c0c, type: 3}
+  - {fileID: 21300000, guid: 0201e168f06505041945009fc65be0b0, type: 3}
+  - {fileID: 21300000, guid: 4c61fa79da910494dad478af08d75d7e, type: 3}
+  - {fileID: 21300000, guid: 7b0189a978769fe41aba5ae382eac180, type: 3}
+  - {fileID: 21300000, guid: c8bfb1ab0bff82f429486a63a0881d64, type: 3}
+  - {fileID: 21300000, guid: 4a29a88ce725b5547816eb7d468417ca, type: 3}
+  - {fileID: 21300000, guid: 9ad41bae0ba28024c95d107fcd7b6ffa, type: 3}
+  - {fileID: 21300000, guid: 7d95deffcbb688242bad97a6740a449b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - L_Arm
+  - Eyes_L
+  - Leg_Guard
+  - Mouth_1
+  - R_Arm
+  - Shadow
+  - Head
+  - Mouth_2
+  - Tear
+  - Target
+  - Vibe2
+  - Leg
+  - Vibe1
+  - Eyes_brow_R
+  - Eyes_R
+  - Eyes_brow_L
+  - Body
+  m_RenderDataMap: {}
+  m_Tag: WoodenAtlas
+  m_IsVariant: 0

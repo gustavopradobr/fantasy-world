@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ArcherWomanAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 2
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: e39fafc053626cd45823c05a276f8ddb, type: 3}
+    - {fileID: 2800000, guid: 41e6fcd6df314fe4fa952a056097886c, type: 3}
+    - {fileID: 2800000, guid: c428924b274f80c41905c0e9cced8253, type: 3}
+    - {fileID: 2800000, guid: fc6260e7304d06a4cb1850fd6346d510, type: 3}
+    - {fileID: 2800000, guid: 3dad8e511b294b34e845728ec3a319e5, type: 3}
+    - {fileID: 2800000, guid: ad0dd87428a9e9e4ebb82ce5553e27b9, type: 3}
+    - {fileID: 2800000, guid: e997f44b5f753344693c18efc7a2d1d2, type: 3}
+    - {fileID: 2800000, guid: 988d94d5f9baa8143a7bc651f1917641, type: 3}
+    - {fileID: 2800000, guid: 03dea14e121ceeb44b05507f2f0cbb58, type: 3}
+    - {fileID: 2800000, guid: 9717f627b953ca44482c1237e897ef65, type: 3}
+    - {fileID: 2800000, guid: cfaa7940f2c67d64e81bb083c35e864d, type: 3}
+    - {fileID: 2800000, guid: dbd2b238fb5649b4bad468f3c0ee5e76, type: 3}
+    - {fileID: 2800000, guid: a5a04137f5821484993c1cfcbcae1736, type: 3}
+    - {fileID: 2800000, guid: e43ff314e0353ac4581cfd7d33b32444, type: 3}
+    - {fileID: 2800000, guid: 2d6e57806d278184e92fae1f0d27c3ac, type: 3}
+    - {fileID: 2800000, guid: 13a6caadb3dcbb741b50be912de438a7, type: 3}
+    - {fileID: 2800000, guid: 454fa178e496d2643bff2ddea99f150e, type: 3}
+    - {fileID: 2800000, guid: 63893e48504a5e2459b4f50e268565b7, type: 3}
+    - {fileID: 2800000, guid: 206dfb5c5f21d844c828b48ea7e58af0, type: 3}
+    - {fileID: 2800000, guid: 4a30277c807670a44bdec07fcb0334e6, type: 3}
+    - {fileID: 2800000, guid: b06b92e0e2c4ea547addc2282139f356, type: 3}
+    - {fileID: 2800000, guid: 727097755234b9847982bc2bbcd069cf, type: 3}
+    - {fileID: 2800000, guid: 90b20082a9f144c408d2331e1144de7d, type: 3}
+    - {fileID: 2800000, guid: 4c0a1de5569b8d94a94cdd907e39a673, type: 3}
+    - {fileID: 2800000, guid: 36bc4b978ad8e534a9a78583f7984a71, type: 3}
+    - {fileID: 2800000, guid: 66d34fb7d91db704fb9094f8c8c488ab, type: 3}
+    - {fileID: 2800000, guid: 02e4e6a6357f5a44e8a9cf8f32145d90, type: 3}
+    - {fileID: 2800000, guid: 93a0226fa73a9b04dba98fc74759840a, type: 3}
+    - {fileID: 2800000, guid: 51d340f38d09b8c4d88d86d569efe91a, type: 3}
+    - {fileID: 2800000, guid: 2fc7ccd207feea140944ea3f4a7e376e, type: 3}
+    - {fileID: 2800000, guid: 296e0eea3e2921342881bdbda4e555cf, type: 3}
+    - {fileID: 2800000, guid: 1d5cab8e8c60fe7439be6ad02f8376a2, type: 3}
+    - {fileID: 2800000, guid: e83e228a4b3aaba4fb717635bd88dafd, type: 3}
+    - {fileID: 2800000, guid: 514baf06d0e3098458c7a07b98895708, type: 3}
+    - {fileID: 2800000, guid: 6957e3c5d1362d249bd13a92e5142d31, type: 3}
+    - {fileID: 2800000, guid: 917459cc0664ab646b3caf8154fd2aef, type: 3}
+    - {fileID: 2800000, guid: 508d1c4a588fcb54b85f9e4d48ae0a9f, type: 3}
+    - {fileID: 2800000, guid: 5e22a1cdd71d62e4c819b9be37487fb8, type: 3}
+    - {fileID: 2800000, guid: 5808c39b8b57350488b1d84df56041a8, type: 3}
+    - {fileID: 2800000, guid: 67f29031eb99c0847ad7b8da0c948d6f, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: cfaa7940f2c67d64e81bb083c35e864d, type: 3}
+  - {fileID: 21300000, guid: 2d6e57806d278184e92fae1f0d27c3ac, type: 3}
+  - {fileID: 21300000, guid: e39fafc053626cd45823c05a276f8ddb, type: 3}
+  - {fileID: 21300000, guid: b06b92e0e2c4ea547addc2282139f356, type: 3}
+  - {fileID: 21300000, guid: 67f29031eb99c0847ad7b8da0c948d6f, type: 3}
+  - {fileID: 21300000, guid: 3dad8e511b294b34e845728ec3a319e5, type: 3}
+  - {fileID: 21300000, guid: 90b20082a9f144c408d2331e1144de7d, type: 3}
+  - {fileID: 21300000, guid: 2fc7ccd207feea140944ea3f4a7e376e, type: 3}
+  - {fileID: 21300000, guid: 51d340f38d09b8c4d88d86d569efe91a, type: 3}
+  - {fileID: 21300000, guid: e43ff314e0353ac4581cfd7d33b32444, type: 3}
+  - {fileID: 21300000, guid: ad0dd87428a9e9e4ebb82ce5553e27b9, type: 3}
+  - {fileID: 21300000, guid: 727097755234b9847982bc2bbcd069cf, type: 3}
+  - {fileID: 21300000, guid: 6957e3c5d1362d249bd13a92e5142d31, type: 3}
+  - {fileID: 21300000, guid: 988d94d5f9baa8143a7bc651f1917641, type: 3}
+  - {fileID: 21300000, guid: 4c0a1de5569b8d94a94cdd907e39a673, type: 3}
+  - {fileID: 21300000, guid: 514baf06d0e3098458c7a07b98895708, type: 3}
+  - {fileID: 21300000, guid: 02e4e6a6357f5a44e8a9cf8f32145d90, type: 3}
+  - {fileID: 21300000, guid: 41e6fcd6df314fe4fa952a056097886c, type: 3}
+  - {fileID: 21300000, guid: 9717f627b953ca44482c1237e897ef65, type: 3}
+  - {fileID: 21300000, guid: a5a04137f5821484993c1cfcbcae1736, type: 3}
+  - {fileID: 21300000, guid: 36bc4b978ad8e534a9a78583f7984a71, type: 3}
+  - {fileID: 21300000, guid: 66d34fb7d91db704fb9094f8c8c488ab, type: 3}
+  - {fileID: 21300000, guid: fc6260e7304d06a4cb1850fd6346d510, type: 3}
+  - {fileID: 21300000, guid: dbd2b238fb5649b4bad468f3c0ee5e76, type: 3}
+  - {fileID: 21300000, guid: 63893e48504a5e2459b4f50e268565b7, type: 3}
+  - {fileID: 21300000, guid: 454fa178e496d2643bff2ddea99f150e, type: 3}
+  - {fileID: 21300000, guid: 508d1c4a588fcb54b85f9e4d48ae0a9f, type: 3}
+  - {fileID: 21300000, guid: e83e228a4b3aaba4fb717635bd88dafd, type: 3}
+  - {fileID: 21300000, guid: 296e0eea3e2921342881bdbda4e555cf, type: 3}
+  - {fileID: 21300000, guid: c428924b274f80c41905c0e9cced8253, type: 3}
+  - {fileID: 21300000, guid: e997f44b5f753344693c18efc7a2d1d2, type: 3}
+  - {fileID: 21300000, guid: 5808c39b8b57350488b1d84df56041a8, type: 3}
+  - {fileID: 21300000, guid: 206dfb5c5f21d844c828b48ea7e58af0, type: 3}
+  - {fileID: 21300000, guid: 4a30277c807670a44bdec07fcb0334e6, type: 3}
+  - {fileID: 21300000, guid: 917459cc0664ab646b3caf8154fd2aef, type: 3}
+  - {fileID: 21300000, guid: 13a6caadb3dcbb741b50be912de438a7, type: 3}
+  - {fileID: 21300000, guid: 5e22a1cdd71d62e4c819b9be37487fb8, type: 3}
+  - {fileID: 21300000, guid: 03dea14e121ceeb44b05507f2f0cbb58, type: 3}
+  - {fileID: 21300000, guid: 1d5cab8e8c60fe7439be6ad02f8376a2, type: 3}
+  - {fileID: 21300000, guid: 93a0226fa73a9b04dba98fc74759840a, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Warrior_03__DIE_000
+  - Warrior_03__DIE_004
+  - Warrior_03__ATTACK_000
+  - Warrior_03__HURT_000
+  - Warrior_03__IDLE_009
+  - Warrior_03__ATTACK_004
+  - Warrior_03__HURT_002
+  - Warrior_03__HURT_009
+  - Warrior_03__HURT_008
+  - Warrior_03__DIE_003
+  - Warrior_03__ATTACK_005
+  - Warrior_03__HURT_001
+  - Warrior_03__IDLE_004
+  - Warrior_03__ATTACK_007
+  - Warrior_03__HURT_003
+  - Warrior_03__IDLE_003
+  - Warrior_03__HURT_006
+  - Warrior_03__ATTACK_001
+  - Warrior_03__ATTACK_009
+  - Warrior_03__DIE_002
+  - Warrior_03__HURT_004
+  - Warrior_03__HURT_005
+  - Warrior_03__ATTACK_003
+  - Warrior_03__DIE_001
+  - Warrior_03__DIE_007
+  - Warrior_03__DIE_006
+  - Warrior_03__IDLE_006
+  - Warrior_03__IDLE_002
+  - Warrior_03__IDLE_000
+  - Warrior_03__ATTACK_002
+  - Warrior_03__ATTACK_006
+  - Warrior_03__IDLE_008
+  - Warrior_03__DIE_008
+  - Warrior_03__DIE_009
+  - Warrior_03__IDLE_005
+  - Warrior_03__DIE_005
+  - Warrior_03__IDLE_007
+  - Warrior_03__ATTACK_008
+  - Warrior_03__IDLE_001
+  - Warrior_03__HURT_007
+  m_RenderDataMap: {}
+  m_Tag: ArcherWomanAtlas
+  m_IsVariant: 0
