@@ -27,6 +27,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource[] damageHit;
 
     private AudioSource actualSong;
+    private float footstepInitialVolume;
+    private float footstepInitialPitch;
 
     private void Start()
     {
@@ -36,7 +38,8 @@ public class AudioManager : MonoBehaviour
             for (int i = 0; i < songs.Count; i++)
                 songOriginalVolume.Add(songs[i].volume);
         }
-
+        footstepInitialVolume = footstep.volume;
+        footstepInitialPitch = footstep.pitch;
         UnpauseSong();
     }
 
@@ -75,12 +78,17 @@ public class AudioManager : MonoBehaviour
         buttonClickLight.Play();
     }
 
-    public void Footstep(bool enable)
+    public void Footstep(bool enable, float volumeScale)
     {
         if (enable && !footstep.isPlaying)
             footstep.Play();
         else if(!enable && footstep.isPlaying)
             footstep.Stop();
+
+        float volumeScaleClamp = Mathf.Clamp01(volumeScale);
+
+        footstep.pitch = footstepInitialPitch * volumeScaleClamp;
+        footstep.volume = footstepInitialVolume * volumeScaleClamp;
     }
 
     public void ChangeSong(int number)

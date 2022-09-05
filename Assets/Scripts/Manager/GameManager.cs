@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public PlayerController playerController;
     public CameraController cameraController;
     public UIManager uiManager;
+    public DialogueManager dialogueManager;
     public AudioManager audioManager;
     public CheckpointManager checkpointManager;
     [SerializeField] private ShopManager shopManager;
@@ -92,7 +93,7 @@ public class GameManager : MonoBehaviour
     {
         uiManager.EndGameScreen();
         audioManager.SongPitchDown();
-        audioManager.Footstep(false);
+        audioManager.Footstep(false, 0f);
     }
 
     public void GoToMenu()

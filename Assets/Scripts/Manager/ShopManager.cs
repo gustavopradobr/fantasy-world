@@ -1,14 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ShopManager : MonoBehaviour
 {
+    public static bool shopIsOpen = false;
+
     [Header("References")]
     [SerializeField] private ScriptableShopItems shopItems;
     [SerializeField] private GameObject shopItemPrefab;
     [SerializeField] private GameObject shopCanvas;
     [SerializeField] private Transform shopContent;
+
+    [Header("Events")]
+    [SerializeField] private UnityEvent shopOpened;
+    [SerializeField] private UnityEvent shopClosed;
 
     private List<bool> availableItems = new List<bool>();
 
@@ -16,13 +23,20 @@ public class ShopManager : MonoBehaviour
 
     private void Start()
     {
+        shopIsOpen = false;
         LoadAvailableItems();
     }
     public void OpenShop(bool open)
     {
+        shopIsOpen = open;
         LoadAvailableItems();
         SpawnItems();
         shopCanvas.SetActive(open);
+
+        if (open)
+            shopOpened.Invoke();
+        else
+            shopClosed.Invoke();
     }
 
     public void SpawnItems()

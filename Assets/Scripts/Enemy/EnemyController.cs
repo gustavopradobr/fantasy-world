@@ -167,12 +167,10 @@ public class EnemyController : MonoBehaviour
             else if (dropItem[i].dropType == Collectable.CollectableType.Chest)
                 newCollectable = GameManager.Instance.poolChest.Spawn(null);
 
-            //Vector3 positionRandomness = Vector3.one * Random.Range(-1f, 1f);
-            //newCollectable.transform.position = transform.position + new Vector3(i + positionRandomness.x, positionRandomness.y, 0);
             newCollectable.transform.position = transform.position;
+            newCollectable.GetComponent<Collectable>().InitCollectable(dropItem[i].dropValue);
             Vector2 randomDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
             newCollectable.GetComponent<Rigidbody2D>().AddForce(randomDirection * newCollectable.GetComponent<Rigidbody2D>().mass * 10f, ForceMode2D.Impulse);
-            newCollectable.GetComponent<Collectable>().InitCollectable(dropItem[i].dropValue);
         }     
     }
 

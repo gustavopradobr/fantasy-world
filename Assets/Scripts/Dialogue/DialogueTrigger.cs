@@ -26,7 +26,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialog(Action call)
     {
-        DialogueManager.Instance.StartDialogue(dialogue, call);        
+        GameManager.Instance.dialogueManager.StartDialogue(dialogue, call);       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -62,5 +62,11 @@ public class DialogueTrigger : MonoBehaviour
     {
         boxTalkIcon.SetActive(false);
         dialogFinished.Invoke();
+
+        if (!ShopManager.shopIsOpen)
+        {
+            spaceInstruction.SetActive(true);
+            GameManager.Instance.playerController.gameObject.GetComponent<NormalInput>().OnPressSpace.AddListener(StartDialogue);
+        }
     }
 }

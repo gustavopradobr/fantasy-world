@@ -6,21 +6,11 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager Instance { get; private set; }
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-            Destroy(this);
-        else
-            Instance = this;
-    }
-
     private Queue<string> sentences;
     private Action dialogueCallback;
     private bool typing = false;
     private bool cancelTyping = false;
     WaitForSecondsRealtime waitType = new WaitForSecondsRealtime(0.01f);
-
 
     [Header("References")]
     [SerializeField] private Canvas dialogueCanvas;
@@ -98,6 +88,7 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
+        GameManager.Instance.audioManager.ButtonClickStrong();
         headerText.text = "";
         dialogueText.text = "";
         dialogueCanvas.gameObject.SetActive(false);

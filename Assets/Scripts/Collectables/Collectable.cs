@@ -27,9 +27,11 @@ public class Collectable : MonoBehaviour
     public float followPlayerSpeed = 1f;
 
     private bool used = false;
+    private bool pooled = false;
 
     public void InitCollectable(int _value)
     {
+        pooled = true;
         animator.StopPlayback();
         GetComponent<Collider2D>().enabled = false;
         used = false;
@@ -51,8 +53,12 @@ public class Collectable : MonoBehaviour
     private void DespawnCollectable()
     {
         //animator.Play(collectedAnimationName);
-        GetComponent<Collider2D>().enabled = false;        
-        Lean.Pool.LeanPool.Despawn(gameObject);
+        GetComponent<Collider2D>().enabled = false;
+
+        if (pooled)
+            Lean.Pool.LeanPool.Despawn(gameObject);
+        else
+            Destroy(gameObject);
     }
 
     private IEnumerator EnableTrigger(float delay)
@@ -61,7 +67,7 @@ public class Collectable : MonoBehaviour
         GetComponent<Collider2D>().enabled = true;
     }
 
-    /*
+    /* Abandoned effect
     private IEnumerator FollowPlayer(Transform target)
     {
         Vector3 velocity = Vector3.zero;

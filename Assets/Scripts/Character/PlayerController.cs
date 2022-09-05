@@ -28,13 +28,11 @@ public class PlayerController : MonoBehaviour {
     public bool dead = false;
     private List<SpriteRenderer> spriteRenderer = new List<SpriteRenderer>();
     private float movementScale = 0;
-    private Vector3 lastPosition = new Vector3(0,0,0);
 
     void Start(){
         input = GetComponent<NormalInput>();
         playerWeapon = GetComponent<PlayerWeapon>();
         m_rigidbody = GetComponent<Rigidbody2D>();
-        lastPosition = m_rigidbody.position;
         maxLife = life;
         GetComponentsInChildren<SpriteRenderer>(true, spriteRenderer);
         for (int i = 0; i < spriteRenderer.Count; i++)
@@ -48,13 +46,10 @@ public class PlayerController : MonoBehaviour {
                 spriteRenderer[i].sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
         }        
 
-        //float actualVelocity = (transform.position - lastPosition).magnitude * walkAnimationSpeed;
-        //lastPosition = transform.position;
         movementScale = Mathf.SmoothStep(movementScale, m_rigidbody.velocity.magnitude, Time.deltaTime*10);
 
         m_Animator.SetFloat("MoveSpeed", movementScale * walkAnimationSpeed);
-
-        GameManager.Instance.audioManager.Footstep(movementScale > 0.05f && moveDir.magnitude > 0);
+        GameManager.Instance.audioManager.Footstep(movementScale > 0.1f && moveDir.magnitude > 0.05f, movementScale / (movementSpeed / 1.5f));
     }
 
     private void FixedUpdate()
@@ -65,7 +60,6 @@ public class PlayerController : MonoBehaviour {
         m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Hit") || m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2"))
             return;
 
-        //m_rigidbody.MovePosition(m_rigidbody.position + moveDir * movementSpeed);
         m_rigidbody.velocity = moveDir * movementSpeed;
 
         UpdateCharacterDirection();
