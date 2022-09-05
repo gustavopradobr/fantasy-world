@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
+    [SerializeField] private AudioMixer audioMixer;
+
     [SerializeField] private List<AudioSource> songs = new List<AudioSource>();
     [SerializeField] private List<float> songOriginalVolume = new List<float>();
 
@@ -27,9 +30,14 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        actualSong = songs[0];
-        for(int i=0; i<songs.Count; i++)
-            songOriginalVolume.Add(songs[i].volume);
+        if (songs.Count > 0)
+        {
+            actualSong = songs[0];
+            for (int i = 0; i < songs.Count; i++)
+                songOriginalVolume.Add(songs[i].volume);
+        }
+
+        UnpauseSong();
     }
 
     public void Coin()
@@ -81,6 +89,12 @@ public class AudioManager : MonoBehaviour
             return;
         StartCoroutine(CrossfadeAudio(actualSong, songs[number], 2f));
     }
+    public void ChangeSongQuickly(int number)
+    {
+        if (actualSong == songs[number])
+            return;
+        StartCoroutine(CrossfadeAudio(actualSong, songs[number], 0.5f));
+    }
 
     public void SongPitchDown()
     {
@@ -89,11 +103,11 @@ public class AudioManager : MonoBehaviour
 
     public void PauseSong()
     {
-        actualSong.Pause();
+        audioMixer.SetFloat("MusicVolume", -80);
     }
     public void UnpauseSong()
     {
-        actualSong.UnPause();
+        audioMixer.SetFloat("MusicVolume", 0);
     }
 
     private IEnumerator CrossfadeAudio(AudioSource clipOut, AudioSource clipIn, float duration)

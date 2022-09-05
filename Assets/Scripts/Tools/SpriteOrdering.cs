@@ -3,10 +3,10 @@
 public class SpriteOrdering : MonoBehaviour {
 
     [SerializeField] private int sortingOrderOrigin = 0;
-    private SpriteRenderer[] spriteRenderers;
+    private SpriteRenderer[] spriteRenderers = new SpriteRenderer[0];
     [SerializeField] private bool updateOrdering = false;
 
-    private void Start () {
+    private void Awake () {
         spriteRenderers = GetComponentsInChildren<SpriteRenderer>(true);
         SortingOrder();
     }
@@ -29,6 +29,8 @@ public class SpriteOrdering : MonoBehaviour {
 
     public void ResetOrdering()
     {
+        if (spriteRenderers == null || spriteRenderers.Length == 0) return;
+
         int min = -32768;
         for (int i = 0; i < spriteRenderers.Length; i++)
             spriteRenderers[i].sortingOrder = min;

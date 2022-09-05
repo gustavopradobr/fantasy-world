@@ -32,12 +32,16 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1;
+        pauseEnabled = true;
+        paused = false;
 
         if (Instance != null && Instance != this)
             Destroy(this);
         else
             Instance = this;
-
+    }
+    private void Start()
+    {
         if (restartingGame)
         {
             playerController.transform.position = checkpointManager.RecoverCheckpointPosition(gameData.checkpoint);
@@ -94,27 +98,12 @@ public class GameManager : MonoBehaviour
     public void GoToMenu()
     {
         gameData.SaveGameData();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
     public void RestartGame()
     {
         restartingGame = true;
         gameData.SaveGameData();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void StartGame()
-    {
-        SceneManager.LoadScene(1);
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
-
-    private void OnApplicationQuit()
-    {
-        gameData.SaveGameData();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
 }

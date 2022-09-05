@@ -53,7 +53,7 @@ public class EnemyController : MonoBehaviour
    
     private float initialLife;
 
-    private void Start()
+    private void Awake()
     {
         rigibody = GetComponent<Rigidbody2D>();
         enemyAi = GetComponent<EnemyAI>();
@@ -121,7 +121,7 @@ public class EnemyController : MonoBehaviour
             healthBar.value = life / initialLife;
 
             if (life <= 0)
-                DestroyEnemy();
+                DestroyEnemy(true);
             else
             {
                 animator.Play(hitAnimationName);
@@ -132,7 +132,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void DestroyEnemy()
+    public void DestroyEnemy(bool reward)
     {
         if(enemyAi)
             enemyAi.CancelInvoke();
@@ -146,7 +146,8 @@ public class EnemyController : MonoBehaviour
         if (TryGetComponent(out SpriteOrdering _spriteOrdering))
             _spriteOrdering.ResetOrdering();
 
-        DropItems();
+        if(reward)
+            DropItems();
 
         dieEvent.Invoke();
 

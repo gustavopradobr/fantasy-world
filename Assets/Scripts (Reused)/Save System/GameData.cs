@@ -8,11 +8,11 @@ public class GameData : MonoBehaviour
     public int skinIndex = 0;
     public int checkpoint = 0;
 
-    public bool[] hairAvailable;
-    public bool[] armsAvailable;
-    public bool[] torsoAvailable;
-    public bool[] legsAvailable;
-    public bool[] swordAvailable;
+    public bool[] hairAvailable = {true,false,false};
+    public bool[] armsAvailable = { true, false, false };
+    public bool[] torsoAvailable = { true, false, false };
+    public bool[] legsAvailable = { true, false, false };
+    public bool[] swordAvailable = { true, false, false };
 
     public int hairEquip = 0;
     public int armsEquip = 0;
@@ -24,6 +24,13 @@ public class GameData : MonoBehaviour
     {
         GameDataSerialize data = SaveSystem.LoadGameData(this);
 
+        GetData(data);
+
+        CheckEquippedIfAvailable();
+    }
+
+    private void GetData(GameDataSerialize data)
+    {
         goldCoins = data.goldCoins;
         skinIndex = data.skinIndex;
         checkpoint = data.checkpoint;
@@ -39,10 +46,7 @@ public class GameData : MonoBehaviour
         torsoEquip = data.torsoEquip;
         legsEquip = data.legsEquip;
         swordEquip = data.swordEquip;
-
-        CheckEquippedIfAvailable();
     }
-
     public void SaveGameData()
     {
         SaveSystem.SaveGameData(this);
@@ -60,5 +64,12 @@ public class GameData : MonoBehaviour
             legsEquip = 0;
         if (!swordAvailable[swordEquip])
             swordEquip = 0;
+    }
+
+    public void ResetGameData()
+    {
+        GameDataSerialize newData = new GameDataSerialize();
+        GetData(newData);
+        SaveGameData();
     }
 }

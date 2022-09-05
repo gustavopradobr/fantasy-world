@@ -9,11 +9,11 @@ public class GameDataSerialize
     public int skinIndex = 0;
     public int checkpoint = 0;
 
-    public bool[] hairAvailable;
-    public bool[] torsoAvailable;
-    public bool[] armsAvailable;
-    public bool[] legsAvailable;
-    public bool[] swordAvailable;
+    public bool[] hairAvailable = { true, false, false };
+    public bool[] torsoAvailable = { true, false, false };
+    public bool[] armsAvailable = { true, false, false };
+    public bool[] legsAvailable = { true, false, false };
+    public bool[] swordAvailable = { true, false, false };
 
     public int hairEquip = 0;
     public int torsoEquip = 0;
@@ -38,5 +38,9 @@ public class GameDataSerialize
         armsEquip = gameData.armsEquip;
         legsEquip = gameData.legsEquip;
         swordEquip = gameData.swordEquip;
+    }
+    public GameDataSerialize()
+    {
+
     }
 }

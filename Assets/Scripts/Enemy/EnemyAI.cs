@@ -17,7 +17,7 @@ public class EnemyAI : MonoBehaviour
 
     [HideInInspector] public bool attacking = false;
 
-    private void Start()
+    private void Awake()
     {
         enemyController = GetComponent<EnemyController>();
 
