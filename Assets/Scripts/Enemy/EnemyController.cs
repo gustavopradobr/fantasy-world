@@ -127,6 +127,8 @@ public class EnemyController : MonoBehaviour
                 animator.Play(hitAnimationName);
                 StartCoroutine(WaitPlayerAttackFinish());
             }
+
+            GameManager.Instance.audioManager.SwordHit();
         }
     }
 

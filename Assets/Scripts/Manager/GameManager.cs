@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public PlayerController playerController;
     public CameraController cameraController;
     public UIManager uiManager;
+    public AudioManager audioManager;
     public CheckpointManager checkpointManager;
     [SerializeField] private ShopManager shopManager;
     public GameData gameData;
@@ -30,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1;
+
         if (Instance != null && Instance != this)
             Destroy(this);
         else
@@ -50,12 +53,14 @@ public class GameManager : MonoBehaviour
             paused = true;
             Time.timeScale = 0;
             uiManager.PauseGame(true);
+            audioManager.PauseSong();
         }
         else if(!pause && paused)
         {
             paused = false;
             Time.timeScale = 1;
             uiManager.PauseGame(false);
+            audioManager.UnpauseSong();
         }
     }
 
@@ -82,6 +87,8 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         uiManager.EndGameScreen();
+        audioManager.SongPitchDown();
+        audioManager.Footstep(false);
     }
 
     public void GoToMenu()

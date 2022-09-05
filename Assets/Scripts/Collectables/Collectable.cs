@@ -31,7 +31,6 @@ public class Collectable : MonoBehaviour
     public void InitCollectable(int _value)
     {
         animator.StopPlayback();
-        transform.localScale = Vector3.one;
         GetComponent<Collider2D>().enabled = false;
         used = false;
         value = _value;
@@ -51,9 +50,9 @@ public class Collectable : MonoBehaviour
 
     private void DespawnCollectable()
     {
-        animator.Play(collectedAnimationName);
+        //animator.Play(collectedAnimationName);
         GetComponent<Collider2D>().enabled = false;        
-        Lean.Pool.LeanPool.Despawn(gameObject, 1.5f);
+        Lean.Pool.LeanPool.Despawn(gameObject);
     }
 
     private IEnumerator EnableTrigger(float delay)

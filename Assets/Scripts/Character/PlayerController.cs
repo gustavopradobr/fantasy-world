@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour {
     public ClothChanger clothChanger;
 
     [Header("Properties")]
-    [Range(0, 1f)][SerializeField] private float movementSpeed = 0.1f;
-    [Range(0, 25f)][SerializeField] private float walkAnimationSpeed = 10f;
+    [Range(0, 20f)][SerializeField] private float movementSpeed = 0.1f;
+    [Range(0, 5f)][SerializeField] private float walkAnimationSpeed = 10f;
     [SerializeField] private bool enableAutomaticSpriteSorting = true;
     [SerializeField] private int initialSortingOrder = 1;
 
@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour {
     private float maxLife;
 
     public bool movementEnabled = true;
+    public bool dead = false;
     private List<SpriteRenderer> spriteRenderer = new List<SpriteRenderer>();
     private float movementScale = 0;
     private Vector3 lastPosition = new Vector3(0,0,0);
@@ -47,10 +48,13 @@ public class PlayerController : MonoBehaviour {
                 spriteRenderer[i].sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
         }        
 
-        float actualVelocity = (transform.position - lastPosition).magnitude * walkAnimationSpeed;
-        lastPosition = transform.position;
-        movementScale = Mathf.SmoothStep(movementScale, actualVelocity, Time.deltaTime*10);
-        m_Animator.SetFloat("MoveSpeed", movementScale);
+        //float actualVelocity = (transform.position - lastPosition).magnitude * walkAnimationSpeed;
+        //lastPosition = transform.position;
+        movementScale = Mathf.SmoothStep(movementScale, m_rigidbody.velocity.magnitude, Time.deltaTime*10);
+
+        m_Animator.SetFloat("MoveSpeed", movementScale * walkAnimationSpeed);
+
+        GameManager.Instance.audioManager.Footstep(movementScale > 0.05f && moveDir.magnitude > 0);
     }
 
     private void FixedUpdate()
@@ -61,7 +65,8 @@ public class PlayerController : MonoBehaviour {
         m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Hit") || m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2"))
             return;
 
-        m_rigidbody.MovePosition(m_rigidbody.position + moveDir * movementSpeed);
+        //m_rigidbody.MovePosition(m_rigidbody.position + moveDir * movementSpeed);
+        m_rigidbody.velocity = moveDir * movementSpeed;
 
         UpdateCharacterDirection();
     }
@@ -90,6 +95,7 @@ public class PlayerController : MonoBehaviour {
 
         playerWeapon.AttackQuick();
         m_Animator.SetTrigger("Attack");
+        GameManager.Instance.audioManager.SwordShort();
     }
     public void Attack2()
     {
@@ -98,6 +104,7 @@ public class PlayerController : MonoBehaviour {
 
         playerWeapon.AttackStrong();
         m_Animator.SetTrigger("Attack2");
+        GameManager.Instance.audioManager.SwordLong();
     }
     public void Hit()
     {
@@ -105,16 +112,17 @@ public class PlayerController : MonoBehaviour {
     }
     public void Die()
     {
+        dead = true;
         m_Animator.Play("Die");
-
         movementEnabled = false;
         enabled = false;
-
         GameManager.Instance.EndGame();
     }
 
     private void AddDamage(float damage)
     {
+        if (dead) return;
+
         life -= damage;
 
         if(life <= 0)
@@ -125,6 +133,8 @@ public class PlayerController : MonoBehaviour {
         {
             Hit();
         }
+
+        GameManager.Instance.audioManager.DamageHit();
 
         UpdateHealth();
     }

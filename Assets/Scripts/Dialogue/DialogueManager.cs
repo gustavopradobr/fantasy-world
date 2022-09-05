@@ -77,6 +77,7 @@ public class DialogueManager : MonoBehaviour
     }
     private IEnumerator TypeSentence(string sentence)
     {
+        GameManager.Instance.audioManager.ButtonClickStrong();
         typing = true;
         dialogueText.text = "";
         foreach(char letter in sentence.ToCharArray())

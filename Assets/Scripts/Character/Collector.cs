@@ -15,6 +15,7 @@ public class Collector : MonoBehaviour
                 Collectable.CollectableType type = collectable.type;
                 int value = collectable.Collect();
                 GameManager.AddCoin(value);
+                GameManager.Instance.audioManager.Coin();
             }
         }
     }

@@ -86,14 +86,16 @@ public class ShopManager : MonoBehaviour
             GameManager.goldCoins -= shopItems.item[id].price;
 
             GameManager.Instance.gameData.SaveGameData();
-        }
 
-        LoadAvailableItems();
-        UpdateItems();
+            LoadAvailableItems();
+            UpdateItems();
+        }
     }
 
     public void EquipItem(int index)
     {
+        GameManager.Instance.audioManager.ButtonClickLight();
+
         if (index < 3)
         {
             GameManager.Instance.playerController.clothChanger.ChangeHair(index);
