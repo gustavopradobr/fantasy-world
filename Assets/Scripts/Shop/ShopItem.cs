@@ -13,14 +13,19 @@ public class ShopItem : MonoBehaviour
     [SerializeField] private Color disabledColor;
     private Color whiteColor = new Color(1, 1, 1);
 
-    public void SetInfo(int id, bool unlocked, int price, Sprite itemSprite, ShopManager manager)
+    public void SetInfo(int id, bool unlocked, int price, bool selling, Sprite itemSprite, ShopManager manager)
     {
         Button button = GetComponent<Button>();
         button.onClick.RemoveAllListeners();
         Color desiredColor = whiteColor;
         button.interactable = true;
 
-        if (!unlocked)
+        if (selling)
+        {
+            button.onClick.AddListener(delegate { manager.SellItem(id); });
+            price = Mathf.FloorToInt((float)price / 2);
+        }
+        else if (!unlocked)
         {    
             button.onClick.AddListener(delegate { manager.BuyItem(id); });
 
@@ -39,7 +44,7 @@ public class ShopItem : MonoBehaviour
 
         priceText.text = price.ToString();
         itemImage.sprite = itemSprite;
-        priceText.transform.parent.gameObject.SetActive(!unlocked);
-        unlockedObject.SetActive(unlocked);
+        priceText.transform.parent.gameObject.SetActive(!unlocked || selling);
+        unlockedObject.SetActive(unlocked && !selling);
     }
 }

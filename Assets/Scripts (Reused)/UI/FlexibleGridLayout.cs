@@ -39,6 +39,17 @@ public class FlexibleGridLayout : LayoutGroup
     public bool autoUpdateWidth;
     public bool autoUpdateHeight;
 
+    private int GetActiveChildCount(Transform t)
+    {
+        int count = 0;
+        foreach(Transform child in t)
+        {
+            if (child.gameObject.activeSelf)
+                count++;
+        }
+        return count;
+    }
+
     public override void CalculateLayoutInputVertical()
     {
         base.CalculateLayoutInputHorizontal();
@@ -47,13 +58,15 @@ public class FlexibleGridLayout : LayoutGroup
         if (fixedRows)
         {
             fixedColumns = false;
-            columns = Mathf.CeilToInt(transform.childCount / (float)rows);
+            //columns = Mathf.CeilToInt(transform.childCount / (float)rows);
+            columns = Mathf.CeilToInt(GetActiveChildCount(transform) / (float)rows);
         }
 
         if (fixedColumns)
         {
             fixedRows = false;
-            rows = Mathf.CeilToInt(transform.childCount / (float)columns);
+            //rows = Mathf.CeilToInt(transform.childCount / (float)columns);
+            rows = Mathf.CeilToInt(GetActiveChildCount(transform) / (float)columns);
         }
 
         /*
