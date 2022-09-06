@@ -158,8 +158,8 @@ RectTransform:
   m_Father: {fileID: 1355408288}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.15, y: 0.2}
-  m_AnchorMax: {x: 0.85, y: 0.7}
+  m_AnchorMin: {x: 0.1, y: 0}
+  m_AnchorMax: {x: 0.9, y: 0.8}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
@@ -2156,8 +2156,8 @@ RectTransform:
   m_Father: {fileID: 19317725}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0.3}
-  m_AnchorMax: {x: 0.9, y: 0.9}
+  m_AnchorMin: {x: 0.1, y: 0.26}
+  m_AnchorMax: {x: 0.9, y: 0.95}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2208,8 +2208,10 @@ MonoBehaviour:
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: RESET
+    m_LineSpacing: 0.85
+  m_Text: 'RESET
+
+    PROGRESS'
 --- !u!222 &939011246
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3458,7 +3460,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8315884315477220620, guid: e7e3d5cc28ccc8445b936e6aeb56fb0b, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 0af4c0ffa64da2c4dbf72894e31a2401, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 73135cec0d15a374cb4f39b1f51ab2a0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.4
   m_Pitch: 1

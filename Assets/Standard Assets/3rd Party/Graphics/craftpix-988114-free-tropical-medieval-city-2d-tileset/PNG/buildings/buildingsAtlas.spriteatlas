@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: buildingsAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 2
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 0843c1d9768b466468f12e61a2b49f46, type: 3}
+    - {fileID: 2800000, guid: e0dc160134af1684da151960c0097cae, type: 3}
+    - {fileID: 2800000, guid: 9b39d0bc6000192428ac2fefe6d3d727, type: 3}
+    - {fileID: 2800000, guid: 5fb162a1898ba4749a4cd4dcd3f4cac7, type: 3}
+    - {fileID: 2800000, guid: b6463dade05215c4199c05648e2ffb83, type: 3}
+    - {fileID: 2800000, guid: e1904abd32fc18f44bec4636ab430b91, type: 3}
+    - {fileID: 2800000, guid: 8035134d127ba8d4e8cab7ddc42b9723, type: 3}
+    - {fileID: 2800000, guid: 7f42706df438c7d4cae836250ddaf3bd, type: 3}
+    - {fileID: 2800000, guid: 61898f366be53c34d8cebdc0ef00b276, type: 3}
+    - {fileID: 2800000, guid: b1b947415c116144295ad63c86f84c9e, type: 3}
+    - {fileID: 2800000, guid: 81cec6db716d7034f9b1d1fb89894018, type: 3}
+    - {fileID: 2800000, guid: 695265aaae15a104593bddea1729be05, type: 3}
+    - {fileID: 2800000, guid: 0b2cfc839e017984f9467ec84dff048c, type: 3}
+    - {fileID: 2800000, guid: 9cf9b52b4be1da447b5bd3b97e3fe8ed, type: 3}
+    - {fileID: 2800000, guid: 4b191091a6bfdc24ea88b268d17f7584, type: 3}
+    - {fileID: 2800000, guid: c8e7bccf8fc338f45a89fd953b4d0eb8, type: 3}
+    - {fileID: 2800000, guid: dc1396d52f5a39f4f950ae2aa112da5b, type: 3}
+    - {fileID: 2800000, guid: 27500690ed829754aa8bd630d9cae38e, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 27500690ed829754aa8bd630d9cae38e, type: 3}
+  - {fileID: 21300000, guid: e0dc160134af1684da151960c0097cae, type: 3}
+  - {fileID: 21300000, guid: b1b947415c116144295ad63c86f84c9e, type: 3}
+  - {fileID: 21300000, guid: 4b191091a6bfdc24ea88b268d17f7584, type: 3}
+  - {fileID: 21300000, guid: 5fb162a1898ba4749a4cd4dcd3f4cac7, type: 3}
+  - {fileID: 21300000, guid: 0b2cfc839e017984f9467ec84dff048c, type: 3}
+  - {fileID: 21300000, guid: dc1396d52f5a39f4f950ae2aa112da5b, type: 3}
+  - {fileID: 21300000, guid: 61898f366be53c34d8cebdc0ef00b276, type: 3}
+  - {fileID: 21300000, guid: 0843c1d9768b466468f12e61a2b49f46, type: 3}
+  - {fileID: 21300000, guid: 695265aaae15a104593bddea1729be05, type: 3}
+  - {fileID: 21300000, guid: 9cf9b52b4be1da447b5bd3b97e3fe8ed, type: 3}
+  - {fileID: 21300000, guid: 81cec6db716d7034f9b1d1fb89894018, type: 3}
+  - {fileID: 21300000, guid: 9b39d0bc6000192428ac2fefe6d3d727, type: 3}
+  - {fileID: 21300000, guid: 8035134d127ba8d4e8cab7ddc42b9723, type: 3}
+  - {fileID: 21300000, guid: 7f42706df438c7d4cae836250ddaf3bd, type: 3}
+  - {fileID: 21300000, guid: b6463dade05215c4199c05648e2ffb83, type: 3}
+  - {fileID: 21300000, guid: e1904abd32fc18f44bec4636ab430b91, type: 3}
+  - {fileID: 21300000, guid: c8e7bccf8fc338f45a89fd953b4d0eb8, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - building_18
+  - building_2
+  - building_10
+  - building_15
+  - building_4
+  - building_13
+  - building_17
+  - building_9
+  - building_1
+  - building_12
+  - building_14
+  - building_11
+  - building_3
+  - building_7
+  - building_8
+  - building_5
+  - building_6
+  - building_16
+  m_RenderDataMap: {}
+  m_Tag: buildingsAtlas
+  m_IsVariant: 0

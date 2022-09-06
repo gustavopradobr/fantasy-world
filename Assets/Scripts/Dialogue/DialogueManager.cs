@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static bool dialogOpen = false;
     private Queue<string> sentences;
     private Action dialogueCallback;
     private bool typing = false;
@@ -22,12 +23,14 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
+        dialogOpen = false;
         sentences = new Queue<string>();
         waitType = new WaitForSecondsRealtime(typeDelay);
     }
 
     public void StartDialogue(DialogueTrigger.Dialogue dialogue, Action call)
     {
+        dialogOpen = true;
         dialogueCallback = call;
         GameManager.Instance.playerController.movementEnabled = false;
         dialogueCanvas.gameObject.SetActive(true);
@@ -99,5 +102,6 @@ public class DialogueManager : MonoBehaviour
 
         dialogueCallback?.Invoke();
         dialogueCallback = null;
+        dialogOpen = false;
     }
 }

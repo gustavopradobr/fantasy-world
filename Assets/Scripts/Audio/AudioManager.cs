@@ -38,8 +38,11 @@ public class AudioManager : MonoBehaviour
             for (int i = 0; i < songs.Count; i++)
                 songOriginalVolume.Add(songs[i].volume);
         }
-        footstepInitialVolume = footstep.volume;
-        footstepInitialPitch = footstep.pitch;
+        if (footstep)
+        {
+            footstepInitialVolume = footstep.volume;
+            footstepInitialPitch = footstep.pitch;
+        }
         UnpauseSong();
     }
 

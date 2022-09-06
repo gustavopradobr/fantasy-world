@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour {
 
     public void Attack1()
     {
-        if (PlayerWeapon.playerAttacking)
+        if (PlayerWeapon.playerAttacking || DialogueManager.dialogOpen)
             return;
 
         playerWeapon.AttackQuick();
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour {
     }
     public void Attack2()
     {
-        if (PlayerWeapon.playerAttacking)
+        if (PlayerWeapon.playerAttacking || DialogueManager.dialogOpen)
             return;
 
         playerWeapon.AttackStrong();
